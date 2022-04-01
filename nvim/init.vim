@@ -5,6 +5,7 @@
     set ignorecase smartcase	" ignore case when searching except when it contains an uppercase
     set modelines=0		" number of lines at the beginning and end of files checked for file-specific vars set visualbell		" flashes screen upon error instead of emitting sound
     set nobackup		" don't create 'filename~' backups
+    set termguicolors
     set noswapfile		" don't create temp swp files
     set autoindent		" indent new line same as preceding line
     set showmatch		" highlight matching parens
@@ -13,7 +14,6 @@
     set noshowmode		" hides insert/normal mode message in statusline
     set cursorline		" shows cursor line
     set mouse=nicr		" enables trackpad/mouse scrolling in nvim
-    set t_Co=256		" sets colorscheme to 256 bit mode
     filetype plugin on		" enables the filetype plugin
     syntax enable		" enable syntax highlighting
 
@@ -39,6 +39,7 @@
     set fenc=utf-8
     set fencs=iso-2022-jp,euc-jp,cp932
 
+    set runtimepath+=~/Documents/scripts/nvim/build/runtime
 
 " =================== REMAPPINGS ===================
 
@@ -78,6 +79,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Raimondi/delimitmate'					" smart completion of delimiters like ()[]'' 
     Plug 'rhysd/accelerated-jk'					" accelerating jk/updown movement
     Plug 'UnikMask/iroh-vim'					" importing Alex's colorscheme
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'github/copilot.vim'
     Plug 'dikiaap/minimalist'					" importing minimalist colorscheme
     Plug 'neoclide/coc.nvim', {'branch': 'release'}		" code-completion and syntax highlighting
     Plug 'kevinoid/vim-jsonc'					" jsonc (json w/ comment support) syntax highlighting
@@ -87,7 +90,7 @@ call plug#end()
 
 " Minimalist colorscheme preferences
 colorscheme minimalist	" enable minimalist colorscheme
-let g:airline_theme='minimalist' " enable minimalist colorscheme for airline
+let g:airline_theme='iroh' " enable minimalist colorscheme for airline
 let g:airline_powerline_fonts = 1 " enable minimalist colorscheme for airline
 let g:airline#extensions#tabline#enabled = 1 " enable minimalist colorscheme for airline
 

@@ -35,17 +35,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-alias v="nvim"
+alias v="${HOME}/.local/bin/nvim"
 alias gitlabC="ssh -D 8123 -f -C -q -N oyy1@oyy1.host.cs.st-andrews.ac.uk"
 alias la="exa -la --git --header"
 alias ll="exa -l --git --header"
-alias emacs="unlink .emacs; emacs &"
+alias emacs="unlink ${HOME}/.emacs; emacs &"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -64,3 +62,6 @@ unset __conda_setup
 
 
 eval $(thefuck --alias)
+export VIMRUNTIME="$HOME/Documents/scripts/nvim/runtime"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
