@@ -67,30 +67,30 @@
 " Load plugins
 call plug#begin('~/.config/nvim/plugged')
     " Load general plugins
-    Plug 'mhinz/vim-startify'					" shows startup screen on 'nvim' with shortcuts
+    Plug 'mhinz/vim-startify'					                  " shows startup screen on 'nvim' with shortcuts
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }	" shows directory tree
-    Plug 'majutsushi/tagbar'					" shows overview of file structure on :TagbarToggle
-    Plug 'itchyny/lightline.vim'				" show statusbar below
-    Plug 'tpope/vim-abolish' 					" substitute, search, and abbreviate multiple variants of a word 
-    Plug 'tpope/vim-commentary'					" easy commenting motions 
-    Plug 'tpope/vim-surround' 					" mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.  
-    Plug 'benmills/vimux' 					" tmux integration for vim 
-    Plug 'tpope/vim-repeat' 					" repeating other supported plugins with the . command 
-    Plug 'Raimondi/delimitmate'					" smart completion of delimiters like ()[]'' 
-    Plug 'rhysd/accelerated-jk'					" accelerating jk/updown movement
-    Plug 'UnikMask/iroh-vim'					" importing Alex's colorscheme
+    Plug 'majutsushi/tagbar'					                  " shows overview of file structure on :TagbarToggle
+    Plug 'itchyny/lightline.vim'				                " show statusbar below
+    Plug 'tpope/vim-abolish' 					                  " substitute, search, and abbreviate multiple variants of a word 
+    Plug 'tpope/vim-commentary'					                " easy commenting motions 
+    Plug 'tpope/vim-surround' 					                " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.  
+    Plug 'benmills/vimux' 					                    " tmux integration for vim 
+    Plug 'tpope/vim-repeat' 					                  " repeating other supported plugins with the . command 
+    Plug 'Raimondi/delimitmate'					                " smart completion of delimiters like ()[]'' 
+    Plug 'rhysd/accelerated-jk'					                " accelerating jk/updown movement
+    Plug 'UnikMask/iroh-vim'					                  " importing Alex's colorscheme
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'github/copilot.vim'
-    Plug 'dikiaap/minimalist'					" importing minimalist colorscheme
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}		" code-completion and syntax highlighting
-    Plug 'kevinoid/vim-jsonc'					" jsonc (json w/ comment support) syntax highlighting
-    Plug 'preservim/nerdcommenter'				" comment out lines with \cc and \cu
-    Plug 'sheerun/vim-polyglot'					" lanugage server bundle
+    Plug 'dikiaap/minimalist'					                  " importing minimalist colorscheme
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}		  " code-completion and syntax highlighting
+    Plug 'kevinoid/vim-jsonc'					                  " jsonc (json w/ comment support) syntax highlighting
+    Plug 'preservim/nerdcommenter'				              " comment out lines with \cc and \cu
+    Plug 'sheerun/vim-polyglot'					                " language server bundle
 call plug#end() 
 
 " Minimalist colorscheme preferences
-colorscheme minimalist	" enable minimalist colorscheme
-let g:airline_theme='iroh' " enable minimalist colorscheme for airline
+colorscheme dracula	" enable minimalist colorscheme
+let g:airline_theme='dracula' " enable minimalist colorscheme for airline
 let g:airline_powerline_fonts = 1 " enable minimalist colorscheme for airline
 let g:airline#extensions#tabline#enabled = 1 " enable minimalist colorscheme for airline
 

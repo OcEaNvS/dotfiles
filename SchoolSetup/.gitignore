@@ -1,0 +1,4 @@
+/bin/*
+/fonts/*
+/nvim/runtime/*
+/nvim/build/*
